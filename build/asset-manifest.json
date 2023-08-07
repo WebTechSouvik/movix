@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a810a96a.css",
+    "main.js": "/static/js/main.c88f5503.js",
+    "static/js/787.a156c37b.chunk.js": "/static/js/787.a156c37b.chunk.js",
+    "static/media/no-poster.png": "/static/media/no-poster.de8cb0a7786e6bf2b2de.png",
+    "static/media/movix-logo.png": "/static/media/movix-logo.672c9ef652b566477a1c.png",
+    "static/media/movix-logo.svg": "/static/media/movix-logo.9d67d13c155c38743f313bd4784d0c7b.svg",
+    "index.html": "/index.html",
+    "main.a810a96a.css.map": "/static/css/main.a810a96a.css.map",
+    "main.c88f5503.js.map": "/static/js/main.c88f5503.js.map",
+    "787.a156c37b.chunk.js.map": "/static/js/787.a156c37b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a810a96a.css",
+    "static/js/main.c88f5503.js"
+  ]
+}
