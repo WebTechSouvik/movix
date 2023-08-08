@@ -1,16 +1,15 @@
-.carosal-heading{
+.carosal-heading {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 50px;
 }
-.carosal-head-text{
+.carosal-head-text {
 	font-size: 2rem;
 	color: white;
 }
-.carosal-btn{
+.carosal-btn {
 	height: 34px;
-	
 
 	border-radius: 20px;
 	overflow: hidden;
@@ -18,39 +17,34 @@
 	background-color: white;
 	position: relative;
 }
-.carosal-btn button{
+.carosal-btn button {
 	height: 100%;
 	width: 100px;
 	border: none;
 }
-.z{
+.z {
 	position: relative;
 	z-index: 1;
 	font-weight: bold;
 }
-.bg{
-	background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%);
-    border-radius: 20px;
-    height: 30px;
-    width: 100px;
-    position: absolute;
-    top: 2px;
-    transition: all 0.5s;
+.bg {
+	background: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
+	border-radius: 20px;
+	height: 30px;
+	width: 100px;
+	position: absolute;
+	top: 2px;
+	transition: all 0.5s;
 }
 
-
-
-@media screen and (max-width: 425px){
-
-.carosal-head-text{
-	font-size:1.5rem;
+@media screen and (max-width: 425px) {
+	.carosal-head-text {
+		font-size: 1.5rem;
+	}
+	.carosal-btn button {
+		width: 70px;
+	}
+	.bg {
+		width: 70px;
+	}
 }
-.carosal-btn button{
-	width: 70px;
-}
-.bg{
-	width: 70px;
-}
-
-}
-

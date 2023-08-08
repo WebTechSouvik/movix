@@ -1,13 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import "./contentwraper.css"
+import "./contentwraper.css";
 
-const Contentwraper = ({children}) => {
-	return (
-		<div className="Contentwraper">
-			{children}
-		</div>
-	)
-}
+const Contentwraper = ({ children }) => {
+	return <div className="Contentwraper">{children}</div>;
+};
 
-export default Contentwraper
+export default Contentwraper;

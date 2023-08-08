@@ -1,23 +1,19 @@
-.show-reasults{
+.show-reasults {
 	min-height: 700px;
-	   display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
-    margin-top: 20px;
-
+	display: flex;
+	flex-wrap: wrap;
+	gap: 22px;
+	margin-top: 20px;
 }
-.search-heading{
+.search-heading {
 	margin-top: 70px;
 	color: white;
 	font-size: 1.2rem;
 }
 
-
-
-@media screen and (max-width: 425px){
-	.show-reasults{
-
-	justify-content: center;
-    align-items: center;
-}
+@media screen and (max-width: 425px) {
+	.show-reasults {
+		justify-content: center;
+		align-items: center;
+	}
 }
