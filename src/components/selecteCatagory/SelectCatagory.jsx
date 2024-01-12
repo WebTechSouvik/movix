@@ -45,12 +45,16 @@ const SelectCatagory = ({
 
 	return (
 		<div className="catagory__main" onClick={(e) => cancelOption(e)}>
+		<div className="showing__select__options">
 			{selectOption?.map((opt) => (
+
 				<div className="showing__select__option" key={opt.id}>
 					<span>{opt.name}</span>
 					<i class="fa-solid fa-xmark poiter__cersur" id={opt.id}></i>
 				</div>
+				
 			))}
+		</div>
 
 			<div className="catagory__seletion">
 				<div className="catagory__seletion__header">

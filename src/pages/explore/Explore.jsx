@@ -99,7 +99,7 @@ const Explore = () => {
 		<>
 			<Contentwraper>
 				<div className="search-heading">
-					<div>Explore {mediaType}</div>
+					<div className="search-heading-text">Explore {mediaType}</div>
 					{generes && (
 						<SelectCatagory
 							generes={generes}

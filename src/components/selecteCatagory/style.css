@@ -3,7 +3,10 @@
 	gap: 5px;
 	align-items: center;
 }
-
+.showing__select__options{
+	display: flex;
+	gap: 5px;
+}
 .showing__select__option{
 	display: flex;
     gap: 3px;
@@ -60,4 +63,21 @@ color: white;
 }
 .poiter__cersur{
 	cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 425px){
+	.catagory__main{
+		flex-direction: column-reverse;
+		align-items: flex-start;
+		max-height: 80%;
+	}
+	.showing__select__options{
+		display: flex;
+		gap: 5px;
+		flex-wrap: wrap;
+		margin-top: 4px;
+	}
 }

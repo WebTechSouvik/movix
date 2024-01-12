@@ -2,3 +2,13 @@
 	display: flex;
 	justify-content: space-between;
 }
+@media screen and (max-width: 425px){
+
+	.search-heading{
+		flex-direction: column;
+		gap: 10px;
+	}
+	.search-heading-text{
+		padding-left: 9px;
+	}
+}
