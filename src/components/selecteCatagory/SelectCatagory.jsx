@@ -19,7 +19,7 @@ const SelectCatagory = ({
 	};
 	useEffect(() => {
 		handelChange();
-	}, [query]);
+	}, [query,isShow]);
 	const handelChange = () => {
 		// console.log(qurey)
 		if (isShow) {
@@ -62,7 +62,10 @@ const SelectCatagory = ({
 						type="text"
 						value={query}
 						placeholder="Select Catagory"
-						onChange={(e) => setQuery(e.target.value)}
+						onChange={(e) => {
+
+						setIsShow(true)
+							setQuery(e.target.value)}}
 					/>
 					<i
 						class="fa-solid fa-angle-down poiter__cersur"

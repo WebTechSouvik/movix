@@ -43,7 +43,7 @@ const Explore = () => {
 
 	const cancelOption = (e) => {
 		// const repalce=/`${e.target.id},`|`${e.target.id}`/
-		const newParams = params.replace(
+		const newParams = params?.replace(
 			new RegExp(`${e.target.id},|${e.target.id}`),
 			"",
 		);
