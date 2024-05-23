@@ -6,6 +6,7 @@ import { getDataFromApi } from "../../api/Api.js";
 import Moviecard from "../../components/moviecard/Moviecard.jsx";
 import "./style.css";
 import InfiniteScroll from "react-infinite-scroll-component";
+import ExploreSkeleton from "../../components/exploreSkeleton/ExploreSkeleton.jsx";
 
 const Searchresult = () => {
 	const { query } = useParams();
@@ -25,12 +26,11 @@ const Searchresult = () => {
 	};
 
 	const nextdata = async () => {
-		setloading(true);
 		const res = await getDataFromApi(
 			`/search/multi?query=${query}&page=${pagenum}`,
 		);
 		setData({ ...data, results: [...data.results, ...res.results] });
-		setloading(false);
+
 		setPagenum(pagenum + 1);
 		console.log(res);
 	};
@@ -44,16 +44,18 @@ const Searchresult = () => {
 		<>
 			<Contentwraper>
 				<div className="search-heading">search result for {query}</div>
-				{data && (
-					<InfiniteScroll
-						next={nextdata}
-						dataLength={data?.results?.length}
-						className={"show-reasults"}
-						hasMore={data?.total_pages >= pagenum}
-						loader={<h3>loading......</h3>}
-					>
-						{data &&
-							data?.results?.map((cur_res) => {
+				{loading ? (
+					<ExploreSkeleton />
+				) : (
+					data && (
+						<InfiniteScroll
+							next={nextdata}
+							dataLength={data?.results?.length}
+							className={"show-reasults"}
+							hasMore={data?.total_pages >= pagenum}
+							loader={<h3>loading......</h3>}
+						>
+							{data?.results?.map((cur_res) => {
 								return (
 									<Moviecard
 										key={cur_res.id}
@@ -61,7 +63,8 @@ const Searchresult = () => {
 									/>
 								);
 							})}
-					</InfiniteScroll>
+						</InfiniteScroll>
+					)
 				)}
 			</Contentwraper>
 		</>

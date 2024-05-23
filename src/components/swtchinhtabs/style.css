@@ -21,6 +21,7 @@
 	height: 100%;
 	width: 100px;
 	border: none;
+	cursor: pointer;
 }
 .z {
 	position: relative;

@@ -5,6 +5,7 @@ import Contentwraper from "../../../components/contentwraper/Contentwraper.js";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "./style.css";
 import dayjs from "dayjs";
+import CastSkeleton from "../../../components/castSkeleton/CastSkeleton.jsx"
 
 const Cast = ({ data, loading }) => {
 	const [result, setResult] = useState([]);
@@ -29,8 +30,8 @@ const Cast = ({ data, loading }) => {
 				<div className="heading">Top cast</div>
 
 				<div className="cast-items">
-					{result.length > 0
-						? result.map((cur) => {
+					{loading?<CastSkeleton/>:result?.length > 0
+						&& result.map((cur) => {
 								return (
 									<div className="cast-item">
 										<div className="cast-img">
@@ -48,7 +49,7 @@ const Cast = ({ data, loading }) => {
 									</div>
 								);
 						  })
-						: ""}
+						}
 				</div>
 			</Contentwraper>
 		</>

@@ -1,0 +1,27 @@
+.show-reasults-skeleton{
+	min-width: calc(20% - 18px);
+	position: relative;
+	overflow: hidden;
+	min-height: 410px;
+}
+
+@media screen and (max-width: 1024px) {
+	
+	.show-reasults-skeleton {
+		min-width: calc(25% - 18px);
+		height: 300px;
+	}
+}
+@media screen and (max-width: 768px) {
+	
+	.show-reasults-skeleton {
+		min-width: calc(33.33% - 18px);
+		height: 300px;
+	}
+}
+@media screen and (max-width: 425px) {
+	.show-reasults-skeleton {
+		min-width: calc(50% - 18px);
+		height: 300px;
+	}
+}

@@ -5,6 +5,7 @@ import Contentwraper from "../../../components/contentwraper/Contentwraper.js";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "./style.css";
 import dayjs from "dayjs";
+import DetailsPageSkeleton from "../../../components/movieDetailsSkeleton/DetailsPageSkeleton.jsx"
 
 const Detalisbanner = ({ id, director, writter, mediaType }) => {
 	const { data, loading } = useFetch(`/${mediaType}/${id}`);
@@ -31,8 +32,8 @@ const Detalisbanner = ({ id, director, writter, mediaType }) => {
 					{!loading && <img src={url + data?.backdrop_path} />}
 				</div>
 				<div className="graidiant"></div>
-				<Contentwraper>
-					<div className="detalis-sec">
+				<Contentwraper>{
+					loading?<DetailsPageSkeleton/>:<div className="detalis-sec">
 						<div className="detalis-poster">
 							<img src={url + data?.poster_path} alt="" />
 						</div>
@@ -48,7 +49,7 @@ const Detalisbanner = ({ id, director, writter, mediaType }) => {
 								<div className="ratings">
 									<CircularProgressbar
 										value={data?.vote_average}
-										text={data?.vote_average.toFixed(1)}
+										text={data?.vote_average?.toFixed(1)}
 										maxValue={10}
 										className={"rating"}
 										styles={buildStyles({
@@ -133,7 +134,7 @@ const Detalisbanner = ({ id, director, writter, mediaType }) => {
 								</div>
 							</div>
 						</div>
-					</div>
+					</div>}
 				</Contentwraper>
 			</div>
 		</>

@@ -12,6 +12,7 @@ import Nabvar from "./components/navbar/Nabvar.jsx";
 import Searchresult from "./pages/searchresult/Searchresult.jsx";
 import Explore from "./pages/explore/Explore.jsx";
 import Footer from "./components/footer/Footer.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx"
 
 const App = () => {
     const dispatch = useDispatch();
@@ -29,6 +30,7 @@ const App = () => {
 
     return (
         <BrowserRouter>
+        <ScrollToTop/>
             <Nabvar />
             <Routes>
                 <Route path="/" element={<Home />} />

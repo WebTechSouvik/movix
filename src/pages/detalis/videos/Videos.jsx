@@ -6,6 +6,7 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "./style.css";
 import dayjs from "dayjs";
 import Videopopup from "../../../components/videopopup/Videopopup.jsx";
+import VideoSkeleton from '../../../components/videoSkeleton/VideoSkeleton.jsx'
 
 const Videos = ({ id, mediaType }) => {
 	const [show, setShow] = useState(false);
@@ -20,7 +21,7 @@ const Videos = ({ id, mediaType }) => {
 			<Contentwraper>
 				<div className="heading">Oficial Videos</div>
 				<div className="video-items">
-					{data?.results.map((each) => (
+					{loading ?<VideoSkeleton/>:data?.results.map((each) => (
 						<div key={each.key} className="video-item">
 							<img
 								src={`https://img.youtube.com/vi/${each.key}/mqdefault.jpg`}

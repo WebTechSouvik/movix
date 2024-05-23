@@ -1,0 +1,21 @@
+.each_sekeleton {
+	height: 100%;
+	width: 16%;
+}
+
+@media screen and (max-width: 1024px) {
+	.each_sekeleton {
+		min-width: calc(20% - 10px);
+	}
+}
+@media screen and (max-width: 768px) {
+	.each_sekeleton {
+		min-width: calc(25% - 10px);
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.each_sekeleton {
+		min-width: calc(33.33% - 10px);
+	}
+}

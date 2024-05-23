@@ -29,7 +29,7 @@ const Moviecard = ({ cur_res, mediaType }) => {
 		>
 			<div className="search-carosal-img">
 				<LazyLoadImage
-					className="img1"
+					className="img2"
 					alt={"hello"}
 					effect="blur"
 					src={bg_path}

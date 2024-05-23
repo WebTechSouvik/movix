@@ -9,6 +9,7 @@ import "react-circular-progressbar/dist/styles.css";
 import dayjs from "dayjs";
 import noposter from "../../assets/no-poster.png";
 import { useNavigate, useLocation } from "react-router-dom";
+import CaroslaSkeleton from "../caroslaCardSkeleton/CaroslaSkeleton.jsx"
 
 const Carosal = ({ data, loading, end, mediaType }) => {
 	const navigate = useNavigate();
@@ -20,10 +21,12 @@ const Carosal = ({ data, loading, end, mediaType }) => {
 		console.log("hi");
 		const elements = document.getElementsByClassName("carsal_scroll");
 		const elements1 = document.getElementsByClassName("main-carosal-sec");
+		const ecahCard=document.getElementsByClassName("each-carosal")
 		const maxscroll = elements[0].scrollWidth - elements1[0].offsetWidth;
+		const scrollAmount=maxscroll/5
 		console.log(maxscroll);
 
-		let newscroll = scroll + val;
+		let newscroll = scroll + val*scrollAmount;
 		console.log(newscroll);
 		if (newscroll >= -maxscroll && newscroll <= 0) {
 			setScroll(newscroll);
@@ -43,7 +46,7 @@ const Carosal = ({ data, loading, end, mediaType }) => {
 						className="carsal_scroll"
 						style={{ transform: `translateX(${scroll}px)` }}
 					>
-						{data?.results?.map((cur_res) => {
+						{loading?<CaroslaSkeleton/>:data?.results?.map((cur_res) => {
 							let bg_path = "";
 							!cur_res.poster_path
 								? (bg_path = noposter)
@@ -113,13 +116,13 @@ const Carosal = ({ data, loading, end, mediaType }) => {
 					</div>
 
 					<div
-						onClick={() => carosalMove(-683.75)}
+						onClick={() => carosalMove(-1)}
 						className="left-carosal"
 					>
 						<i class="fa-solid fa-circle-arrow-right"></i>
 					</div>
 					<div
-						onClick={() => carosalMove(683.75)}
+						onClick={() => carosalMove(1)}
 						className="right-carosal"
 					>
 						<i class="fa-solid fa-circle-arrow-left"></i>

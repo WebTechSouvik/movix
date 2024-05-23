@@ -48,6 +48,15 @@ z-index: 1;
     bottom: 32%;
     left: 3px;
 }
+@media screen and (max-width: 768px){
+	.video-items{
+
+		height: 230px
+	}
+	.video-item{
+		min-width:calc(33.33% - 10px) ;
+	}
+}
 @media screen and (max-width: 425px){
 	.video-items{
 		overflow-x: scroll;

@@ -131,17 +131,25 @@
 
 
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 768px){
 
 	.detalis-sec{
 		flex-direction: column;
+		align-items: center;
 
 	}
 	.detalis-poster{
-		width: 100%;
+		width: 60%;
 	}
 	.detalis-content{
 		width: 100%;
 	}
 	
+}
+
+@media screen and (max-width: 425px){
+
+	.detalis-poster{
+		width: 90%;
+	}
 }
