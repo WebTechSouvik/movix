@@ -8,6 +8,7 @@ import "./style.css";
 import InfiniteScroll from "react-infinite-scroll-component";
 import SelectCatagory from "../../components/selecteCatagory/SelectCatagory.jsx";
 import ExploreSkeleton from "../../components/exploreSkeleton/ExploreSkeleton.jsx"
+import DataLoder from "../../components/dataLoder/DataLoader";
 
 const Explore = () => {
 	const { mediaType } = useParams();
@@ -117,7 +118,7 @@ const Explore = () => {
 						dataLength={data?.results?.length}
 						className={"show-reasults"}
 						hasMore={data?.total_pages >= pagenum}
-						loader={<h3>loading......</h3>}
+						loader={<DataLoder/>}
 					>
 						{
 							data?.results?.map((cur_res) => {

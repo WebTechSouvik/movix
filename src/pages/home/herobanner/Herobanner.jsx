@@ -21,8 +21,9 @@ const Herobanner = () => {
 	};
 
 	useEffect(() => {
+		if(url && data)
 		setImgUrl();
-	}, [data]);
+	}, [data,url]);
 
 	return (
 		<>
